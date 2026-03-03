@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="obyv010.ManagerMenu"
+        Title="ООО «Обувь» - окно главного меню менеджера"
+		MinHeight="270"
+		MaxHeight="270"
+		MinWidth="500"
+		MaxWidth="500"
+		Icon="/images/Icon.ico"
+		Background="White">
+
+		<Grid>
+        	<Grid.RowDefinitions>
+            	<RowDefinition Height="70"/>
+				<RowDefinition Height="*"/>
+        	</Grid.RowDefinitions>
+
+			<StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10">
+				<Image Height="50" Width="50" Source="/images/Icon.png" Margin="0,0,30,0"></Image>
+				<TextBlock FontSize="32" FontFamily="Times New Roman">Главное меню менеджера</TextBlock>
+			</StackPanel>
+
+			<StackPanel Grid.Row="1" Margin="10" Orientation="Vertical" HorizontalAlignment="Center">
+				<Button Width="200" Height="30" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A"  Margin="0,0,0,10" Click="ButtonClickProduct">Товары</Button>
+				<Button Width="200" Height="30" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A"  Margin="0,0,0,10" Click="ButtonClickOrder">Заказы</Button>
+				<Button Width="200" Height="30" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A"  Click="ButtonClickExit">Выйти</Button>
+			</StackPanel>
+        </Grid>
+</Window>

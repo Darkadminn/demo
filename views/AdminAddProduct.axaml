@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="obyv010.AdminAddProduct"
+        Title="ООО «Обувь» - окно создания товара"
+        MinHeight="750"
+        MaxHeight="750"
+        MinWidth="500"
+        MaxWidth="500"
+        Icon="/images/Icon.ico"
+        Background="White">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="70"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="100"/>
+		</Grid.RowDefinitions>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10">
+			<Image Height="50" Width="50" Source="/images/Icon.png" Margin="0,0,80,0"></Image>
+			<TextBlock FontSize="32" FontFamily="Times New Roman">Создание товара</TextBlock>
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="1" Margin="10">
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Артикул*</TextBlock>
+				<TextBox FontSize="16" FontFamily="Times New Roman" Name="Article" Background="#7FFF00" Width="170" Margin="0,0,0,10"></TextBox>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Категория*</TextBlock>
+				<ComboBox FontSize="16" FontFamily="Times New Roman" Name="Category" Background="#7FFF00" Width="170" Margin="0,0,0,10"></ComboBox>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Наименование*</TextBlock>
+				<ComboBox FontSize="16" FontFamily="Times New Roman" Name="Title" Background="#7FFF00" Width="170" Margin="0,0,0,10"></ComboBox>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Производитель*</TextBlock>
+				<ComboBox FontSize="16" FontFamily="Times New Roman" Name="ManufactureProduct" Background="#7FFF00" Width="170" Margin="0,0,0,10"></ComboBox>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Поставщик*</TextBlock>
+				<ComboBox FontSize="16" FontFamily="Times New Roman" Name="SupplierProduct" Background="#7FFF00" Width="170" Margin="0,0,0,10"></ComboBox>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Цена*</TextBlock>
+				<TextBox FontSize="16" FontFamily="Times New Roman" Name="Price" Background="#7FFF00" Width="170" Margin="0,0,0,10"></TextBox>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Единица измерения*</TextBlock>
+				<TextBox FontSize="16" FontFamily="Times New Roman" Name="Unit" Background="#7FFF00" Width="170" Margin="0,0,0,10"></TextBox>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Количество на складе*</TextBlock>
+				<TextBox FontSize="16" FontFamily="Times New Roman" Name="CountProduct" Background="#7FFF00" Width="170" Margin="0,0,0,10"></TextBox>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Действующая скидка*</TextBlock>
+				<TextBox FontSize="16" FontFamily="Times New Roman" Name="Discount" Background="#7FFF00" Width="170" Margin="0,0,0,10"></TextBox>
+			</StackPanel>
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="300">
+				<Image Width="200" Height="200" Name="ImageProduct"></Image>
+				<Button Width="200" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A" Margin="0,0,0,50" Click="ButtonClickImage">Добавить изображение</Button>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="200">Описание</TextBlock>
+				<TextBox FontSize="16" FontFamily="Times New Roman" Name="Description" Background="#7FFF00" Width="200" Height="150" Margin="0,0,0,10" TextWrapping="Wrap"></TextBox>
+			</StackPanel>
+		</StackPanel>
+		<StackPanel Grid.Row="2">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button Width="150" Height="30" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A" Margin="0,0,170,0" Click="ButtonClickAdd">Добавить</Button>
+				<Button Width="150" Height="30" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A"  Click="ButtonClickBack">Назад</Button>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<TextBlock Name="Messages" IsVisible="False" FontSize="16" Foreground="Red" HorizontalAlignment="Center" FontFamily="Times New Roman"></TextBlock>
+			</StackPanel>
+		</StackPanel>
+    </Grid>
+</Window>

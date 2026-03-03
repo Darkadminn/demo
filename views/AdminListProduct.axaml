@@ -1,0 +1,59 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="obyv010.AdminListProduct"
+        Title="ООО «Обувь» - окно списка товаров"
+        MinHeight="680"
+        MaxHeight="680"
+        MinWidth="600"
+        MaxWidth="600"
+        Icon="/images/Icon.ico"
+        Background="White">
+  <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="70"/>
+			<RowDefinition Height="50"/>
+			<RowDefinition Height="400"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10">
+			<Image Height="50" Width="50" Source="/images/Icon.png" Margin="0,0,130,0"></Image>
+			<TextBlock FontSize="32" FontFamily="Times New Roman">Список товаров</TextBlock>
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="1" Margin="10">
+			<StackPanel Margin="0,0,30,0">
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="150">Поиск</TextBlock>
+				<TextBox FontSize="16" FontFamily="Times New Roman" Name="Search" Background="#7FFF00" Width="150" Watermark="Поиск"></TextBox>
+			</StackPanel>
+			<StackPanel Margin="0,0,30,0">
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="150">Фильтр</TextBlock>
+				<ComboBox FontSize="16" FontFamily="Times New Roman" Name="Filter" Background="#7FFF00" Width="150" ></ComboBox>
+			</StackPanel>
+			<StackPanel>
+				<TextBlock FontSize="16" FontFamily="Times New Roman" Width="150">Поиск</TextBlock>
+				<ComboBox FontSize="16" FontFamily="Times New Roman" Name="Sort" Background="#7FFF00" Width="150" >
+					<ComboBoxItem>Без сортировки</ComboBoxItem>
+					<ComboBoxItem>По возрастанию</ComboBoxItem>
+					<ComboBoxItem>По убыванию</ComboBoxItem>
+				</ComboBox>
+			</StackPanel>
+			
+		</StackPanel>
+
+		<ScrollViewer Height="440" Margin="10,40,10,10" Grid.Row="2">
+			<StackPanel Name="Products" Orientation="Vertical">
+				
+			</StackPanel>
+
+		</ScrollViewer>
+
+		<StackPanel Grid.Row="3" Margin="10,50,10,10" Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Width="200" Height="30" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A"  Click="ButtonClickAdd" Margin="0,0,140,0">Добавить</Button>
+			<Button Width="200" Height="30" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A"  Click="ButtonClickBack">Назад</Button>
+		</StackPanel>
+	</Grid>
+</Window>

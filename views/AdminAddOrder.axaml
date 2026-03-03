@@ -1,0 +1,66 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="obyv010.AdminAddOrder"
+        Title="ООО «Обувь» - окно создания заказа"
+        MinHeight="650"
+        MaxHeight="650"
+        MinWidth="500"
+        MaxWidth="500"
+        Icon="/images/Icon.ico"
+        Background="White">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="70"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="100"/>
+		</Grid.RowDefinitions>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10">
+			<Image Height="50" Width="50" Source="/images/Icon.png" Margin="0,0,80,0"></Image>
+			<TextBlock FontSize="32" FontFamily="Times New Roman">Создание заказа</TextBlock>
+		</StackPanel>
+
+		<StackPanel Grid.Row="1" Orientation="Vertical" Margin="10">
+			<StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+				<StackPanel>
+					<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Артикул*</TextBlock>
+					<TextBox FontSize="16" FontFamily="Times New Roman" Name="Article" Background="#7FFF00" Width="170" Margin="0,0,0,10"></TextBox>
+					<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Дата заказа*</TextBlock>
+					<CalendarDatePicker FontSize="16" FontFamily="Times New Roman" Name="DateOrder" Background="#7FFF00" Width="170" Margin="0,0,0,10"></CalendarDatePicker>
+					<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Статус*</TextBlock>
+					<ComboBox FontSize="16" FontFamily="Times New Roman" Name="Status" Background="#7FFF00" Width="170" Margin="0,0,0,10"></ComboBox>
+				</StackPanel>
+				<StackPanel Margin="100,0,0,0">
+					<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Адрес пункта выдачи*</TextBlock>
+					<ComboBox FontSize="16" FontFamily="Times New Roman" Name="PickUpPoints" Background="#7FFF00" Width="170" Margin="0,0,0,10"></ComboBox>
+					<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Дата доставки*</TextBlock>
+					<CalendarDatePicker FontSize="16" FontFamily="Times New Roman" Name="DateDelivery" Background="#7FFF00" Width="170" Margin="0,0,0,10"></CalendarDatePicker>
+					<TextBlock FontSize="16" FontFamily="Times New Roman" Width="170">Код*</TextBlock>
+					<TextBox FontSize="16" FontFamily="Times New Roman" Name="Code" Background="#7FFF00" Width="170" Margin="0,0,0,10"></TextBox>
+				</StackPanel>
+			</StackPanel>
+			<TextBlock FontSize="16" FontFamily="Times New Roman" Margin="0,0,0,10">Товары</TextBlock>
+			<Button FontSize="16" FontFamily="Times New Roman" Background="#00FA9A" Click="ButtonClickAddProduct">+</Button>
+			<ScrollViewer Height="180">
+				<StackPanel Name="OrderProducts">
+					
+				</StackPanel>	
+			</ScrollViewer>
+		</StackPanel>
+
+		<StackPanel Grid.Row="2">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button Width="150" Height="30" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A" Margin="0,0,170,0" Click="ButtonClickAdd">Добавить</Button>
+				<Button Width="150" Height="30" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman" Background="#00FA9A"  Click="ButtonClickBack">Назад</Button>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<TextBlock Name="Messages" IsVisible="False" FontSize="16" Foreground="Red" HorizontalAlignment="Center" FontFamily="Times New Roman"></TextBlock>
+			</StackPanel>
+		</StackPanel>
+
+
+	</Grid>
+</Window>
